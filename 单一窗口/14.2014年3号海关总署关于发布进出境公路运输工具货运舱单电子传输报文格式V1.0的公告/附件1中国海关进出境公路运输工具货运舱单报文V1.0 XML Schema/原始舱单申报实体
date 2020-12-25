@@ -1,0 +1,73 @@
+package com.lhznsoft.manifest.domain.vo;
+
+import com.lhznsoft.common.core.web.domain.BaseEntity;
+import com.lhznsoft.manifest.domain.*;
+
+public class ManifestVo extends BaseEntity {
+
+    private ManifestHead head;
+
+    private ManifestDeclaration declaration;
+
+    private ManifestAdditionalinformation additionalInformation;
+
+    private ManifestAgent agent;
+
+    private ManifestBordertransportmeans borderTransportMeans;
+
+    private ManifestCarrier carrier;
+
+    private ManifestConsignment consignment;
+
+    private ManifestConsignmentbordertransportmeans consignmentBorderTransportMeans;
+
+    private ManifestConsignee consignee;
+
+    private ManifestContact contact;
+
+    private ManifestCommunication communication;
+
+    private ManifestConsignmentitem ConsignmentItem;
+
+    private ManifestCommodity commodity;
+
+    private ManifestClassification classification;
+
+    private ManifestPackaging packaging;
+
+    private ManifestGoodsmeasure goodsMeasure;
+
+    private ManifestConsignor consignor;
+
+    private ManifestFreight freight;
+
+    private ManifestGovernmentagencygoodsitem governmentAgencyGoodsItem;
+
+    private ManifestGovernmentprocedure governmentProcedure;
+
+    private ManifestNotifyparty NotifyParty;
+
+    private ManifestAddress address;
+
+    private ManifestTransitdeparture transitDeparture;
+
+    private ManifestTransitdestination transitDestination;
+
+    private ManifestTransportcontractdocument transportContractDocument;
+
+    private ManifestConsolidator consolidator;
+
+    private ManifestDeconsolidator deconsolidator;
+
+    private ManifestTransportequipment TransportEquipment;
+
+    private ManifestUndgcontact UNDGContact;
+
+    private ManifestLoadinglocation loadingLocation;
+
+    private ManifestRepresentativeperson RepresentativePerson;
+
+    private ManifestUnloadinglocation UnloadingLocation;
+
+
+}

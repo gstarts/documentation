@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mft="urn:Declaration:datamodel:standard:CN:MT4402:1" xmlns:Head="Head" xmlns:Declaration="Declaration" xmlns:xdb="http://xmlns.oracle.com/xdb" targetNamespace="urn:Declaration:datamodel:standard:CN:MT4402:1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="Head" schemaLocation="Type/Head.xsd"/>
+	<xs:import namespace="Declaration" schemaLocation="Type/Declaration.xsd"/>
+	<xs:element name="Manifest" type="mft:Manifest">
+		<xs:annotation>
+			<xs:documentation>公路出口载货运输工具承运确报（装载舱单）删除申请</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="Manifest">
+		<xs:annotation>
+			<xs:documentation>公路出口载货运输工具承运确报（装载舱单）删除申请</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Head" type="mft:Head">
+				<xs:annotation>
+					<xs:documentation>报文头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Declaration">
+				<xs:annotation>
+					<xs:documentation>报文体</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="mft:Declaration"/>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Head">
+		<xs:annotation>
+			<xs:documentation>报文头</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="MessageID" type="Head:HeadMessageIdentificationIDType">
+				<xs:annotation>
+					<xs:documentation>报文编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FunctionCode" type="Head:HeadFunctionCodeType" fixed="3">
+				<xs:annotation>
+					<xs:documentation>报文功能代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MessageType" type="Head:HeadMessageTypeCodeType" fixed="MT4402">
+				<xs:annotation>
+					<xs:documentation>报文类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SenderID" type="Head:HeadSenderIdentificationIDType">
+				<xs:annotation>
+					<xs:documentation>发送方代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ReceiverID" type="Head:HeadReceiverIdentificationIDType">
+				<xs:annotation>
+					<xs:documentation>接收方代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SendTime" type="Head:HeadSendDateTimeType">
+				<xs:annotation>
+					<xs:documentation>发送时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Version" type="Head:HeadVersionIDType">
+				<xs:annotation>
+					<xs:documentation>报文版本号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Declaration">
+		<xs:annotation>
+			<xs:documentation>报文体</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="DeclarationOfficeID" type="Declaration:DeclarationDeclarationOfficeIDType">
+				<xs:annotation>
+					<xs:documentation>065 Office of declaration,coded 进出境口岸海关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ID" type="Declaration:DeclarationIdentificationIDType">
+				<xs:annotation>
+					<xs:documentation>D014 Declaration reference number 货物运输批次号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AdditionalInformation" type="mft:AdditionalInformation" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>补充信息数据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RepresentativePerson" type="mft:RepresentativePerson">
+				<xs:annotation>
+					<xs:documentation>进出境承运确报传输人数据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AdditionalInformation">
+		<xs:annotation>
+			<xs:documentation>补充信息数据</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Content" type="Declaration:AdditionalInformationContentTextType">
+				<xs:annotation>
+					<xs:documentation>105 Free text 备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RepresentativePerson">
+		<xs:annotation>
+			<xs:documentation>进出境承运确报传输人数据</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Name" type="Declaration:RepresentativePersonNameTextType">
+				<xs:annotation>
+					<xs:documentation>R006 Representative person name 舱单传输人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

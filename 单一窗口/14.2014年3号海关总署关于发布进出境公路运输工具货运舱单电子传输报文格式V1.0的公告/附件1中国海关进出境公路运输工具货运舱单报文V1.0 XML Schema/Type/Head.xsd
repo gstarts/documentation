@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="Head" targetNamespace="Head" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+
+	<xs:complexType name="HeadFunctionCodeType">
+		<xs:annotation>
+			<xs:documentation>报文功能代码</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+	</xs:complexType>
+	<xs:complexType name="HeadMessageTypeCodeType">
+		<xs:annotation>
+			<xs:documentation>报文类型代码</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+	</xs:complexType>
+	<xs:simpleType name="HeadMessageIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>报文编号</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="HeadReceiverIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>报文接收方代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+	</xs:simpleType>
+	<xs:complexType name="HeadSendDateTimeType">
+		<xs:annotation>
+			<xs:documentation>报文发送时间</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+	</xs:complexType>
+	<xs:simpleType name="HeadSenderIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>报文发送方代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:complexType name="HeadVersionIDType">
+		<xs:annotation>
+			<xs:documentation>报文版本代码</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+	</xs:complexType>
+</xs:schema>

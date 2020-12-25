@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="Declaration" targetNamespace="Declaration" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	
+	
+	
+	
+	<xs:complexType name="ConsignmentItemSequenceNumericType">
+		<xs:annotation>
+			<xs:documentation>006 Sequence number 商品项序号</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:complexType name="StuffingEstablishmentStuffingDateTimeType">
+		<xs:annotation>
+			<xs:documentation>025 Date of vanning 货物装箱时间</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:complexType name="LoadingLocationLoadingDateTimeType">
+		<xs:annotation>
+			<xs:documentation>031 Consignment loading date 货物装载运输工具时间</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:complexType name="ItineraryRoutingCountryCodeType">
+		<xs:annotation>
+			<xs:documentation>064 Country(ies) of routing,coded 途经国家/地区代码</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:complexType name="DeclarationDeclarationOfficeIDType">
+		<xs:annotation>
+			<xs:documentation>065 Office of declaration,coded 进出境口岸海关代码</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:complexType name="TransportContractDocumentConditionCodeType">
+		<xs:annotation>
+			<xs:documentation>091 Contract and carriage condition,coded 运输条款代码</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:complexType name="FreightPaymentMethodCodeType">
+		<xs:annotation>
+			<xs:documentation>098 Transport charges method of payment code 运费支付方法代码</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:complexType name="AmendmentChangeReasonCodeType">
+		<xs:annotation>
+			<xs:documentation>099 Amendment code 变更原因代码</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:simpleType name="AdditionalInformationContentTextType">
+		<xs:annotation>
+			<xs:documentation>105 Free text 集装箱（器）残损说明/备注</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:complexType name="ConsignmentValueAmountType">
+		<xs:annotation>
+			<xs:documentation>110 Consignment value 货物价值</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="currencyID" type="xs:string" use="required">
+					<xs:annotation>
+						<xs:documentation>Amount. Currency. Identifier 金额类型代码</xs:documentation>
+					</xs:annotation>
+					
+					
+					
+					
+					
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:complexType name="GoodsMeasureGrossMassMeasureType">
+		<xs:annotation>
+			<xs:documentation>126 Gross weight item level 货物总毛重/商品项毛重</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="unitCode" use="required" fixed="KGM">
+					<xs:annotation>
+						<xs:documentation>Measure. Unit. Code 重量单位</xs:documentation>
+					</xs:annotation>
+					
+					
+					
+					
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:complexType name="ConsignmentGrossVolumeMeasureType">
+		<xs:annotation>
+			<xs:documentation>134 Cube 货物体积</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="unitCode" use="required" fixed="MTQ">
+					<xs:annotation>
+						<xs:documentation>Measure. Unit. Code 体积单位</xs:documentation>
+					</xs:annotation>
+					
+					
+					
+					
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:simpleType name="CommodityDescriptionTextType">
+		<xs:annotation>
+			<xs:documentation>137 Description of goods 商品项描述补充信息</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="CommodityCargoDescriptionTextType">
+		<xs:annotation>
+			<xs:documentation>138 Brief cargo description 商品项简要描述</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:complexType name="PackagingQuantityQuantityType">
+		<xs:annotation>
+			<xs:documentation>144 Number of packages 商品项件数</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="unitCode" type="xs:string" use="required">
+					<xs:annotation>
+						<xs:documentation>Quantity. Unit. Code 包装种类代码</xs:documentation>
+					</xs:annotation>
+					
+					
+					
+					
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:complexType name="ClassificationIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>145 Commodity classification 危险品编号</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:complexType name="ConsignmentTotalPackageQuantityType">
+		<xs:annotation>
+			<xs:documentation>146 Total number of packages 货物总件数</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="unitCode" type="xs:string" use="required">
+					<xs:annotation>
+						<xs:documentation>Quantity. Unit. Code 包装种类代码</xs:documentation>
+					</xs:annotation>
+					
+					
+					
+					
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:complexType name="TransportEquipmentSupplierPartyTypeCodeType">
+		<xs:annotation>
+			<xs:documentation>151 Equipment supplier type code 集装箱（器）来源代码/改配后新集装箱（器）来源代码</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:complexType name="TransportEquipmentCharacteristicCodeType">
+		<xs:annotation>
+			<xs:documentation>152 Equipment size and type identification 集装箱（器）尺寸和类型/改配后新集装箱（器）尺寸和类型</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:complexType name="TransportEquipmentFullnessCodeType">
+		<xs:annotation>
+			<xs:documentation>154 Transport equipment loaded status 集装箱（器）重箱或者空箱标识代码/改配后新集装箱（器）重箱或者空箱标识代码</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:simpleType name="TransportEquipmentIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>159 Equipment identification number 集装箱（器）编号/托架或拖挂车编号/改配后新集装箱（器）编号</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="TransportEquipmentSealIDType">
+		<xs:annotation>
+			<xs:documentation>165 Seal number 集装箱（器）封志类型、号码及施加封志人类型/改配后新集装箱（器）封志类型、号码及施加封志人类型</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:complexType name="GovernmentProcedureCurrentCodeType">
+		<xs:annotation>
+			<xs:documentation>166 Government procedure,coded 海关货物通关代码</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:complexType name="BorderTransportMeansArrivalDateTimeType">
+		<xs:annotation>
+			<xs:documentation>172 Date and time of arrival at first port of arrival in Customs territory 运输工具抵达关境内第一个目的港的日期和时间</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:complexType name="UnloadingLocationArrivalDateTimeType">
+		<xs:annotation>
+			<xs:documentation>173 Date of arrival at place of discharge 到达卸货地日期</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:simpleType name="AddressLineTextType">
+		<xs:annotation>
+			<xs:documentation>239 Street and number/P.O.Box 通知人地址（街道,邮箱）</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="CommunicationIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>240 Communication number 收货人通讯号码/收货具体联系人通讯号码/发货人通讯号码/通知人通讯号码/危险品联系人通讯号码/理货责任人通讯号码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="ContactNameTextType">
+		<xs:annotation>
+			<xs:documentation>246 Department or employee contact name 收货人具体联系人名称/理货责任人名称</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:complexType name="CommunicationTypeIDType">
+		<xs:annotation>
+			<xs:documentation>253 Communication number Type 收货人通讯方式类别代码/收货人具体联系人通讯方式类别代码/发货人通讯方式类别代码/收货人通讯方式类别代码/通知人通讯方式类别代码/危险品联系人通讯方式类别代码/理货责任人通讯方式类别代码</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:complexType name="ControlInspectionStartDateTimeType">
+		<xs:annotation>
+			<xs:documentation>355 Inspection start date and/or time 理货开始时间</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:complexType name="ControlInspectionEndDateTimeType">
+		<xs:annotation>
+			<xs:documentation>356 Inspection end date and/or time 理货结束时间</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:complexType name="TransportEquipmentAttachedCodeType">
+		<xs:annotation>
+			<xs:documentation>387 Attached transport equipment,coded 托架或拖挂车类型代码</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:simpleType name="AdditionalDocumentIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>D005 Additional document reference number 改配前原货物运输批次号/改配前原提（运）单号/改配前原集装箱（器）编号</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="DeclarationIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>D014 Declaration reference number 货物运输批次号/改配后新货物运输批次号/装箱清单编号</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="TransportContractDocumentIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>D023 Transport document number 提（运）单号/改配后新提（运）单号</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:complexType name="TransitDestinationIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>L008 Place of destination of the transit,coded 跨境指运地</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:simpleType name="LoadingLocationIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>L010 Place of loading,coded 装货地代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="UnloadingLocationIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>L013 Place of discharge,coded 卸货地代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:complexType name="TransitDepartureIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>L087 Place of departure of transit, coded 跨境启运地</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	<xs:simpleType name="AgentIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>R004 Agent,coded 运输工具代理企业代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="RepresentativePersonNameTextType">
+		<xs:annotation>
+			<xs:documentation>R006 Representative person name 舱单传输人名称/装箱清单传输人名称/进出境承运确报传输人名称</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="CarrierIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>R012 Carrier identification 承运人代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="ConsigneeNameTextType">
+		<xs:annotation>
+			<xs:documentation>R014 Consignee name 收货人名称</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="ConsigneeIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>R015 Consignee coded 收货人代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="MasterNameTextType">
+		<xs:annotation>
+			<xs:documentation>R016 Master/operator - name 驾驶员名称</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="MasterIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>R017 Master/operator,coded 驾驶员代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="ConsolidatorIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>R019 Consolidator,coded 拼箱人代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="ConsignorNameTextType">
+		<xs:annotation>
+			<xs:documentation>R020 Consignor - name 发货人名称</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="ConsignorIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>R021 Consignor,coded 发货人代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="DeconsolidatorIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>R023 Deconsolidator,coded 拆箱人代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="NotifyPartyNameTextType">
+		<xs:annotation>
+			<xs:documentation>R045 Notify party 通知人名称</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="NotifyPartyIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>R046 Notify party,coded 通知人代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="UNDGContactNameTextType">
+		<xs:annotation>
+			<xs:documentation>R047 Dangerous goods contact details 危险品联系人姓名</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="SubmitterIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>R059 Submitter,coded 理货公司代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="BorderTransportMeansNameTextType">
+		<xs:annotation>
+			<xs:documentation>T005 Identification of means of transport crossing the border 运输工具名称</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:simpleType name="BorderTransportMeansIdentificationIDType">
+		<xs:annotation>
+			<xs:documentation>T006 Identification of means of transport crossing the border,coded 运输工具代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+		
+		
+		
+		
+		
+		
+	</xs:simpleType>
+	<xs:complexType name="BorderTransportMeansTypeCodeType">
+		<xs:annotation>
+			<xs:documentation>T010 Mode/type of means of transport crossing the border,coded 运输方式代码</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+	
+	
+	
+	<xs:complexType name="TransportEquipmentTareWeightMeasureType">
+		<xs:annotation>
+			<xs:documentation>UNTDED 6156 Transport Equipment. Tare Weight.Measure 集装箱（器）自重/托架或拖挂车自重</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="unitCode" use="required" fixed="KGM">
+					<xs:annotation>
+						<xs:documentation>Measure. Unit. Code 重量单位</xs:documentation>
+					</xs:annotation>
+					
+					
+					
+					
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+		
+		
+		
+		
+		
+		
+		
+	</xs:complexType>
+</xs:schema>
